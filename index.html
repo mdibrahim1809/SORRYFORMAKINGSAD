@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Megha — A Little Cheer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>For Megha</h1>
+    <h2>From Sanu ❤️</h2>
+
+    <div class="heart" id="heart">💕</div>
+
+    <p id="teaser">When days feel heavy, open this little surprise.</p>
+
+    <div class="buttons">
+      <button id="revealBtn">Open for Megha</button>
+      <button id="musicBtn">Play Melody</button>
+      <button id="confettiBtn">Send Confetti</button>
+      <button id="picsBtn">Watch Pics</button>
+    </div>
+
+    <section id="message" class="hidden" aria-live="polite">
+      <div id="personalText"></div>
+      <div class="message-controls">
+        <button id="regenBtn">Next</button>
+        <button id="closeBtn">Close</button>
+      </div>
+    </section>
+
+    <!-- Slideshow overlay -->
+    <div id="slideshow" class="hidden" aria-hidden="true">
+      <div class="slideshow-inner">
+        <div class="slideshow-controls">
+          <div style="flex:1"></div>
+          <button id="closePicsBtn">Close</button>
+        </div>
+        <div class="viewer">
+          <button id="prevPic">◀</button>
+          <img id="slideImg" src="" alt="slideshow image" />
+          <button id="nextPic">▶</button>
+        </div>
+        <div id="slideIndex"></div>
+      </div>
+    </div>
+  </main>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

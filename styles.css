@@ -1,0 +1,32 @@
+:root{--bg1:#f6d365;--bg2:#fda085;--card:#fff}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+html,body{height:100%}
+body{margin:0;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,var(--bg1),var(--bg2));}
+.card{background:var(--card);max-width:720px;width:100%;padding:28px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.12);text-align:center}
+h1{margin:0;font-size:2rem}
+h2{margin:.25rem 0 1rem;color:#777;font-weight:600;font-size:1.05rem}
+.heart{font-size:3rem;transform-origin:center;transition:transform .25s ease}
+#teaser{color:#444;margin:12px 0}
+.buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+button{background:#ff6b6b;border:none;color:white;padding:10px 16px;border-radius:10px;font-size:1rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+button#closeBtn{background:#555}
+.hidden{display:none}
+#message{margin-top:16px;padding:16px;border-radius:10px;background:linear-gradient(180deg,rgba(253,160,133,.12),rgba(246,211,114,.06));}
+#confettiCanvas{position:fixed;pointer-events:none;top:0;left:0;width:100%;height:100%;z-index:9999}
+@media (max-width:420px){.card{padding:18px}button{padding:8px 12px}}
+
+.hidden{display:none}
+/* slideshow overlay */
+#slideshow{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:10000}
+#slideshow:not(.hidden){display:grid;place-items:center}
+.slideshow-inner{background:rgba(255,255,255,0.95);padding:18px;border-radius:12px;max-width:900px;width:92%;max-height:90%;overflow:hidden}
+.slideshow-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.viewer{display:flex;align-items:center;gap:12px;justify-content:center}
+.viewer img{max-width:80%;max-height:60vh;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.viewer button{background:#333;color:#fff;border-radius:50%;width:44px;height:44px}
+#slideIndex{margin-top:8px;text-align:center;color:#333}
+
+/* message lines */
+#personalText{display:grid;gap:6px;text-align:center}
+.message-lines{padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.9);color:#222}
+.message-controls{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:10px}
